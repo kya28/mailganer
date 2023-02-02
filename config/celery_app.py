@@ -12,6 +12,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'send-spam-every-10-minute': {
         'task': 'mailganer.tasks.send_beat_email',
-        'schedule': crontab(minute='*/3'),#day_of_week='sunday'),
+        'schedule': crontab(day_of_week='sunday'),
     }
 }
